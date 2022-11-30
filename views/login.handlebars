@@ -1,0 +1,21 @@
+{{> header}}
+<div class="container mt-3" style="margin-bottom: 280px ;">
+    <h1 class="text-center">Login</h1>
+       {{#if loginflag}}
+        <div class="alert alert-success" role="alert">
+            {{msg}}
+        </div>
+        {{/if}}
+    <form method="post" action="/user/login-data">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input name="pass" type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+{{> footer}}
